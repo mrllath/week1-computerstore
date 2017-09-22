@@ -6,11 +6,7 @@ public class Processor extends Hardware {
 
 	public Processor(String vendor, String name, double price, double clockspeed) {
 		super(vendor, name, price);
-		if (clockspeed <= 0.7) {
-			this.clockspeed = 0.7;
-		} else {
-			this.clockspeed = clockspeed;
-		}
+		setClockspeed(clockspeed);
 	}
 
 	public double getClockspeed() {
@@ -18,6 +14,10 @@ public class Processor extends Hardware {
 	}
 
 	public void setClockspeed(double clockspeed) {
-		this.clockspeed = clockspeed;
+		if (clockspeed < 0.7){
+			this.clockspeed = 0.7;
+		} else {
+			this.clockspeed = clockspeed;
+		}
 	}
 }
