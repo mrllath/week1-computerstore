@@ -20,4 +20,8 @@ public class Processor extends Hardware {
 			this.clockspeed = clockspeed;
 		}
 	}
+	
+	public String toString() {
+		return String.format(super.toString() + "%n" + "Clock speed = " + this.getClockspeed() +"GHz");
+	}
 }

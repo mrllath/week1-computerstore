@@ -28,4 +28,8 @@ public class ComputerCase extends Hardware {
 		this.weight = wheight;
 	}
 	
+	public String toString() {
+		return String.format(super.toString() + "%n" + dimension.toString() + "%n" +"Weight = " + this.getWeight() +"kg");
+	}
+	
 }

@@ -66,5 +66,9 @@ public abstract class Hardware {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	public String toString() {
+		return String.format("ArticleNumber = " + this.getArticleNumber() + "%n" + "Vendor = " + this.getVendor() + "%n" + "Name = " + this.getName() + "%n" + "Price = " + this.getPrice() + "%n");
+	}
 
 }
